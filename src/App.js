@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 import './App.css';
 import Header from './components/header';
+import NavBar from './components/nav-bar';
 import Navigation from './components/navigation';
 import SearchForm from './components/search-form';
 import LiveBoard from './components/live-board';
@@ -18,7 +19,7 @@ class App extends Component {
       <Router>
         <div className="App">
           <Header />
-          <Navigation />
+          <NavBar />
           <Route path="/" component={Main} exact/>
           <Route path="/battle" component={BattleForm} />
         </div>

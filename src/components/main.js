@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './main.css';
 
 import SearchForm from './search-form';
 import LiveBoard from './live-board';
@@ -9,7 +10,7 @@ import TopBoard from './top-board';
 class Main extends Component {
     render() {
         return (
-            <div className="App">
+            <div className="main">
                 <SearchForm />
                 <LiveBoard />
                 <Statistics />
