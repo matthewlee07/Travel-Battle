@@ -1,0 +1,25 @@
+.container {
+    border: 2px solid red;
+    padding: 14px;
+    font-size: 17px;
+    overflow: hidden;
+}
+
+.container::after {
+    content: "";
+    clear: both;
+    display: table; }
+
+.container a {
+    text-decoration: none;
+    padding: 6px;
+}
+
+#logo {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
