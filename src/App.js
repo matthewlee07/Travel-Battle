@@ -6,6 +6,7 @@ import './App.css';
 import Header from './components/header';
 import NavBar from './components/nav-bar';
 import Navigation from './components/navigation';
+import NotFlights from './components/notflights';
 import SearchForm from './components/search-form';
 import LiveBoard from './components/live-board';
 import Statistics from './components/statistics';
@@ -20,8 +21,9 @@ class App extends Component {
         <div className="App">
           <Header />
           <NavBar />
-          <Route path="/" component={Main} exact/>
+          <Route path="/" component={Main} exact />
           <Route path="/battle" component={BattleForm} />
+          <Route path="/notflights" component={NotFlights} />
         </div>
       </Router>
     );

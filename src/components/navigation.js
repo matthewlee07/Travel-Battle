@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 
 export default function Navigation(props) {
     return (
-        <div><Link to="/">Main</Link><br />
+        <div>
+            <Link to="/">Main</Link><br />
             <Link to="/battle">Battle</Link>
         </div>
 
