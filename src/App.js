@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import './App.css';
 
@@ -16,8 +16,15 @@ import Statistics from './components/statistics';
 import TopBoard from './components/top-board';
 
 
-class App extends Component {
-  onSubmit = fields => { console.log('App Component: ' , fields) };
+export default class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      searches: []
+    }
+  }
+
+  onSubmit = fields => { console.log('App Component: ', fields) };
 
   render() {
     return (
@@ -35,5 +42,3 @@ class App extends Component {
     );
   }
 }
-
-export default App;

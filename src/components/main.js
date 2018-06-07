@@ -7,17 +7,28 @@ import Statistics from './statistics';
 import TopBoard from './top-board';
 
 
-class Main extends Component {
-    render() {
-        return (
-            <div className="main">
-                <SearchForm className="searchform" />
-                <LiveBoard />
-                <Statistics />
-                <TopBoard />
-            </div>
-        );
-    }
-}
+// class Main extends Component {
+//     render() {
+//         return (
+//             <div className="main">
+//                 <SearchForm className="searchform" />
+//                 <LiveBoard />
+//                 <Statistics />
+//                 <TopBoard />
+//             </div>
+//         );
+//     }
+// }
 
-export default Main;
+// export default Main;
+
+export default function Main(props) {
+    return (
+        <div className="main">
+            <SearchForm className="searchform" />
+            <LiveBoard />
+            <Statistics />
+            <TopBoard />
+        </div>
+    );
+}
