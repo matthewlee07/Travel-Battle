@@ -4,7 +4,7 @@ export default function LiveBoard(props) {
     return (
         <div>
             <h2>Live Board</h2>
-
+            <p>this.props.state</p>
 
         </div>
 
