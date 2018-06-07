@@ -11,7 +11,7 @@ class Main extends Component {
     render() {
         return (
             <div className="main">
-                <SearchForm />
+                <SearchForm className="searchform" />
                 <LiveBoard />
                 <Statistics />
                 <TopBoard />
