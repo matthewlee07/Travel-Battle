@@ -1,12 +1,16 @@
 import React from 'react';
 import SearchForm from './search-form';
-export default function LiveBoard(props) {
+import { connect } from 'react-redux';
+export function LiveBoard(props) {
     return (
         <div>
             <h2>Live Board</h2>
-            <p>this.props.state</p>
+            <p>{props.searches.length}</p>
 
         </div>
 
     )
 }
+
+const mapStateToProps = state => ({ searches: state.flights.searches });
+export default connect(mapStateToProps)(LiveBoard);
