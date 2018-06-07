@@ -1,12 +1,7 @@
 import React from 'react';
+import { reduxForm, Field } from 'redux-form';
 
-// export default function SearchForm(props) {
-//     return (
-//         <form>Search Form</form>
-//     )
-// }
-
-export default class SearchForm extends React.Component {
+export class SearchForm extends React.Component {
     state = {
         legs: '',
         passengers: '',
@@ -23,16 +18,15 @@ export default class SearchForm extends React.Component {
         })
     };
 
-    onSubmit = e => {
-        e.preventDefault();
-        console.log(this.state)
+    onSubmit(values) {
+        console.log(values);
     };
 
     render() {
         return (
-            <form>
+            <form onSubmit={this.props.handleSubmit(values => this.onSubmit(values))}>
                 <h2>Search Form</h2>
-                <input name="legs" placeholder='One-Way' value={this.state.legs} onChange={e => this.setState({ legs: e.target.value })} /> <br />
+                <Field name="legs" id="legs" type="text" component="input" placeholder='One-Way'/> <br />
                 <input name="passengers" placeholder='# Passengers' value={this.state.passengers} onChange={e => this.setState({ passengers: e.target.value })} /><br />
                 <input name="from" placeholder='From?' value={this.state.from} onChange={e => this.setState({ from: e.target.value })} /><br />
                 <input name="to" placeholder='To?' value={this.state.to} onChange={e => this.setState({ to: e.target.value })} /><br />
@@ -40,8 +34,10 @@ export default class SearchForm extends React.Component {
                 <input name="flexible" placeholder='Flexible?' value={this.state.flexible} onChange={e => this.setState({ flexible: e.target.value })} /><br />
                 <input name="class" placeholder='Class?' value={this.state.class} onChange={e => this.setState({ class: e.target.value })} /><br />
                 <br />
-                <button onClick={e => this.onSubmit(e)}>Submit</button>
+                <button type="submit">Submit</button>
             </form >
         )
     }
 }
+
+export default reduxForm({ form: 'search' })(SearchForm);
