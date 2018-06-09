@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { reduxForm, Field } from 'redux-form';
 import { connect } from 'react-redux';
 import { createSearch } from '../actions';
-export class SearchForm extends React.Component {
+export class SearchForm extends Component {
 
 
     onSubmit(values) {
