@@ -1,4 +1,5 @@
-import { CREATE_SEARCH } from '../actions';
+import { CREATE_SEARCH, CREATE_SEARCH_SUCCESS } from '../actions';
+// import * as actions from '../actions';
 
 const initialState = {
     searches: [],
@@ -6,7 +7,8 @@ const initialState = {
 
 export default (state = initialState, action) => {
     switch (action.type) {
-        case CREATE_SEARCH: {
+        case CREATE_SEARCH_SUCCESS: {
+            console.log('CREATE_SEARCH');
             return Object.assign({}, state, {
                 searches: [...state.searches, action.search]
             })

@@ -2,17 +2,17 @@ import React, { Component } from 'react';
 import { reduxForm, Field } from 'redux-form';
 import { connect } from 'react-redux';
 import { createSearch } from '../actions';
+
+
 export class SearchForm extends Component {
-
-
-    onSubmit(values) {
-        console.log(values);
-        this.props.dispatch(createSearch(values));
+    onSubmit(query) {
+        console.log(query);
+        this.props.dispatch(createSearch(query));
     };
 
     render() {
         return (
-            <form onSubmit={this.props.handleSubmit(values => this.onSubmit(values))}>
+            <form onSubmit={this.props.handleSubmit(query => this.onSubmit(query))}>
                 <h2>Search Form</h2>
                 <Field name="legs" placeholder='One-Way' id="legs" type="text" component="input" /> <br />
                 <Field name="passengers" placeholder='# Passengers' id="passenger" type="text" component="input" /><br />
