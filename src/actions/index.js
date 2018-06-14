@@ -6,7 +6,7 @@ export const createSearch = (search) => dispatch => {
         headers: { 'content-type': 'application/json' }
     })
         .then(res => {
-            if (!res.created) {
+            if (!res.ok) {
                 return Promise.reject(res.statusText);
             }
             return res.json();

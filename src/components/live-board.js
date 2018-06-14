@@ -6,8 +6,9 @@ export function LiveBoard(props) {
     const arr = props.searches.map((search, idx) => {
         return (
             <div>
-                <p>{search.legs}</p>
-                <p>{search.passengers}</p>
+                <p>Legs: {search.legs}</p>
+                <p>passengers: {search.passengers}</p>
+                <p>From:</p>
             </div>
         )
     });
