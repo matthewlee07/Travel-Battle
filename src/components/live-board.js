@@ -1,14 +1,17 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import SearchForm from './search-form';
 
 export function LiveBoard(props) {
     const arr = props.searches.map((search, idx) => {
         return (
             <div>
                 <p>Legs: {search.legs}</p>
-                <p>passengers: {search.passengers}</p>
-                <p>From:</p>
+                <p>Passengers: {search.passengers}</p>
+                <p>From: {search.from}</p>
+                <p>To: {search.to}</p>
+                <p>Date: {search.date}</p>
+                <p>Flexible: {search.flexible}</p>
+                <p>Class: {search.class}</p>
             </div>
         )
     });
