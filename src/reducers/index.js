@@ -1,5 +1,4 @@
-import { CREATE_SEARCH, CREATE_SEARCH_SUCCESS } from '../actions';
-// import * as actions from '../actions';
+import { CREATE_SEARCH_SUCCESS } from '../actions';
 
 const initialState = {
     searches: [],
